@@ -16,46 +16,15 @@
 ## 🧑‍💻 About Me
 
 ```java
-import package:developer.SoftwareEngineer;
-
 public class BinduKabusaraJosue extends SoftwareEngineer {
 
-    final String name        = "Bindu Kabusara Josue";
-    final String location    = "Kampala, Uganda 🇺🇬";
-    final String university  = "Uganda Christian University";
-    final String pronouns    = "he/him";
+    final String name     = "Bindu Kabusara Josue";
+    final String location = "Kampala, Uganda 🇺🇬";
+    final String bio      = "🚀 Passionate about writing clean, scalable code that solves real problems.";
 
-    String[] currentlyBuilding() {
-        return new String[]{
-            "☕ Coffee Domain Katale — Full-stack production management platform",
-            "   (Java Spring Boot · React.js · MariaDB · Railway)"
-        };
-    }
-
-    String[] techStack() {
-        return new String[]{
-            "Backend  : Java · Spring Boot · Spring Security · JPA/Hibernate",
-            "Frontend : React.js · Tailwind CSS · Vite · TanStack Query",
-            "Database : MariaDB · MySQL",
-            "DevOps   : Railway · Git · GitHub · REST APIs"
-        };
-    }
-
-    String[] lookingToCollaborate() {
-        return new String[]{
-            "🤝 Java Spring Boot projects",
-            "⚛️  React.js applications",
-            "🗄️  Full-stack web platforms"
-        };
-    }
-
-    String quickBio() {
-        return "🚀 Passionate about writing clean, scalable code that solves real problems.";
-    }
-
-    String contact() {
-        return "📧 josuebindu97@gmail.com";
-    }
+    String[] stack()       { return new String[]{ "Java · Spring Boot · Spring Security", "React.js · Tailwind CSS · Vite", "MariaDB · MySQL · REST APIs · Railway" }; }
+    String[] collaborate() { return new String[]{ "🤝 Spring Boot APIs", "⚛️ React.js apps", "🗄️ Full-stack platforms" }; }
+    String   contact()     { return "📧 josuebindu97@gmail.com"; }
 }
 ```
 
@@ -107,18 +76,6 @@ public class BinduKabusaraJosue extends SoftwareEngineer {
 [![GitHub Streak](https://streak-stats.demolab.com?user=bindukabusara&theme=tokyonight&hide_border=true&date_format=M%20j%5B%2C%20Y%5D)](https://git.io/streak-stats)
 
 </div>
-
----
-
-## 🚀 Featured Project
-
-<div align="center">
-
-[![Coffee Domain Katale](https://github-readme-stats.vercel.app/api/pin/?username=bindukabusara&repo=Cofee_Domain_Katale_UI&theme=tokyonight&hide_border=true)](https://github.com/bindukabusara/Cofee_Domain_Katale_UI)
-
-</div>
-
-> **Coffee Domain Katale** — A full-stack production management platform for tracking coffee processing from cherry reception through milling, grading, roasting, and sales. Built with Java Spring Boot REST API deployed on Railway and a React.js + Tailwind CSS frontend.
 
 ---
 
