@@ -16,9 +16,9 @@
 ## 🧑‍💻 About Me
 
 ```java
-public class BinduKabusaraJosue extends SoftwareEngineer {
+public class BinduKabusaraJosué extends SoftwareEngineer {
 
-    final String name     = "Bindu Kabusara Josue";
+    final String name     = "Bindu Kabusara Josué";
     final String location = "Kampala, Uganda 🇺🇬";
     final String bio      = "🚀 Passionate about writing clean, scalable code that solves real problems.";
 
