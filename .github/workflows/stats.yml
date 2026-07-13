@@ -1,0 +1,38 @@
+name: Refresh Stats Cards
+on:
+  schedule: [{cron: "23 4 * * *"}]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch stats cards
+        run: |
+          mkdir -p assets
+          fetch() {
+            for i in $(seq 1 10); do
+              if curl -fsSL --max-time 60 "$1" -o "$2.tmp"; then
+                mv "$2.tmp" "$2"
+                return 0
+              fi
+              echo "attempt $i for $2 failed; retrying in 90s"
+              sleep 90
+            done
+            echo "giving up on $2; keeping previous version"
+            rm -f "$2.tmp"
+            return 1
+          }
+          ok=0
+          fetch "https://github-readme-stats.vercel.app/api?username=bindukabusara&show_icons=true&theme=tokyonight&include_all_commits=true&hide_border=true" assets/github-stats.svg || ok=1
+          fetch "https://github-readme-stats.vercel.app/api/top-langs/?username=bindukabusara&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" assets/top-langs.svg || ok=1
+          exit $ok
+      - name: Commit updated cards
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets
+          git diff --cached --quiet || (git commit -m "Update stats cards" && git push)
